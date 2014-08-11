@@ -8,6 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6D0BA477-6A9F-4C5E-97A8-DE5F27F22339}"
 	ProjectSection(SolutionItems) = preProject
 		db\build_windows\VS10\application.props = db\build_windows\VS10\application.props
+		Build.bat = Build.bat
+		build.targets = build.targets
 		db\build_windows\VS10\library.props = db\build_windows\VS10\library.props
 	EndProjectSection
 EndProject

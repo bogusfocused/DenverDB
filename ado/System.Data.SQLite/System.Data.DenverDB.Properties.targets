@@ -11,7 +11,7 @@
     <UseInteropDll>false</UseInteropDll>
     <UseSqliteStandard>True</UseSqliteStandard>
     <InteropLog>false</InteropLog>
-    <BinaryOutputPath>..\..\bin\$(ConfigurationYear)\$(Configuration)\$(Platform)\</BinaryOutputPath>
+    <BinaryOutputPath>..\..\bin\$(Platform)\$(Configuration)\</BinaryOutputPath>
     <InteropExtensionFunctions>false</InteropExtensionFunctions>
     <InteropTestExtension>false</InteropTestExtension>
     <InteropVirtualTable>false</InteropVirtualTable>
