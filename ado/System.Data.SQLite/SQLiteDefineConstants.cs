@@ -7,7 +7,7 @@
 
 using System.Collections.Generic;
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
     internal static class SQLiteDefineConstants
     {

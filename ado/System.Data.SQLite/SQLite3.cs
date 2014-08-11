@@ -5,7 +5,7 @@
  * Released to the public domain, use at your own risk!
  ********************************************************/
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
   using System;
   using System.Collections.Generic;
@@ -1010,7 +1010,7 @@ namespace System.Data.SQLite
               _buildingSchema = true;
               try
               {
-                ISQLiteSchemaExtensions ext = ((IServiceProvider)SQLiteFactory.Instance).GetService(typeof(ISQLiteSchemaExtensions)) as ISQLiteSchemaExtensions;
+                ISQLiteSchemaExtensions ext = ((IServiceProvider)DenverDBFactory.Instance).GetService(typeof(ISQLiteSchemaExtensions)) as ISQLiteSchemaExtensions;
 
                 if (ext != null)
                   ext.BuildTempSchema(cnn);

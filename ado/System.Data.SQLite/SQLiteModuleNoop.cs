@@ -7,7 +7,7 @@
 
 using System.Collections.Generic;
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
     /// <summary>
     /// This class implements a virtual table module that does nothing by

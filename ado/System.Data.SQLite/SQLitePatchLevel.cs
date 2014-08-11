@@ -5,7 +5,7 @@
  * Released to the public domain, use at your own risk!
  ********************************************************/
 
-using System.Data.SQLite;
+using System.Data.DenverDB;
 
 ///////////////////////////////////////////////////////////////////////////////
 

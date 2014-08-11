@@ -5,7 +5,7 @@
  * Released to the public domain, use at your own risk!
  ********************************************************/
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
   /// <summary>
   /// MetaDataCollections specific to SQLite

@@ -5,7 +5,7 @@
  * Released to the public domain, use at your own risk!
  ********************************************************/
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
   using System;
   using System.Globalization;
@@ -15,7 +15,7 @@ namespace System.Data.SQLite
   /// <summary>
   /// SQLite implementation of <see cref="IServiceProvider" />.
   /// </summary>
-  public sealed partial class SQLiteFactory : IServiceProvider
+  public sealed partial class DenverDBFactory : IServiceProvider
   {
     //
     // TODO: This points to the legacy "System.Data.SQLite.Linq" assembly
@@ -37,7 +37,7 @@ namespace System.Data.SQLite
     private static Type _dbProviderServicesType;
     private static object _sqliteServices;
 
-    static SQLiteFactory()
+    static DenverDBFactory()
     {
 #if (SQLITE_STANDARD || USE_INTEROP_DLL || PLATFORM_COMPACTFRAMEWORK) && PRELOAD_NATIVE_LIBRARY
         UnsafeNativeMethods.Initialize();

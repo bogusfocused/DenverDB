@@ -19,10 +19,10 @@ using System.Runtime.ConstrainedExecution;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("System.Data.SQLite Core")]
-[assembly: AssemblyDescription("ADO.NET Data Provider for SQLite")]
+[assembly: AssemblyTitle("System.Data.DenverDB Core")]
+[assembly: AssemblyDescription("ADO.NET Data Provider for DenverDB")]
 [assembly: AssemblyCompany("http://system.data.sqlite.org/")]
-[assembly: AssemblyProduct("System.Data.SQLite")]
+[assembly: AssemblyProduct("System.Data.DenverDB")]
 [assembly: AssemblyCopyright("Public Domain")]
 
 #if DEBUG
@@ -40,11 +40,6 @@ using System.Runtime.ConstrainedExecution;
 //  COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 [assembly: CLSCompliant(true)]
-[assembly: InternalsVisibleTo("System.Data.SQLite.Linq, PublicKey=" + System.Data.SQLite.SQLite3.PublicKey)]
-
-#if NET_40 || NET_45 || NET_451
-[assembly: InternalsVisibleTo("System.Data.SQLite.EF6, PublicKey=" + System.Data.SQLite.SQLite3.PublicKey)]
-#endif
 
 [assembly: NeutralResourcesLanguage("en")]
 

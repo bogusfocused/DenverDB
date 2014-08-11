@@ -5,7 +5,7 @@
  * Released to the public domain, use at your own risk!
  ********************************************************/
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
   using System;
   using System.Globalization;
@@ -27,7 +27,7 @@ namespace System.Data.SQLite
   using System.Runtime.InteropServices;
 
 #if !PLATFORM_COMPACTFRAMEWORK
-  using System.Text;
+    using System.Text;
 #endif
 
 #if !PLATFORM_COMPACTFRAMEWORK || COUNT_HANDLE
@@ -1209,7 +1209,7 @@ namespace System.Data.SQLite
     //
     // NOTE: Otherwise, if the standard SQLite library is enabled, use it.
     //
-    internal const string SQLITE_DLL = "sqlite3";
+    internal const string SQLITE_DLL = "denverdb";
 #elif USE_INTEROP_DLL
       //
     // NOTE: Otherwise, if the native SQLite interop assembly is enabled,

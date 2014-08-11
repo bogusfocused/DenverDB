@@ -5,7 +5,9 @@
  * Released to the public domain, use at your own risk!
  ********************************************************/
 
-namespace System.Data.SQLite
+using System.Data.DenverDB.Resources;
+
+namespace System.Data.DenverDB
 {
   using System;
   using System.Data;

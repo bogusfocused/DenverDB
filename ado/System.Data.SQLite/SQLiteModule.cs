@@ -11,7 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
     #region SQLiteContext Helper Class
     /// <summary>

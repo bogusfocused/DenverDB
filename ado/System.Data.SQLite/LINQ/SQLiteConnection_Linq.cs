@@ -5,18 +5,18 @@
  * Released to the public domain, use at your own risk!
  ********************************************************/
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
   using System.Data.Common;
 
   public sealed partial class SQLiteConnection
   {
     /// <summary>
-    /// Returns the <see cref="SQLiteFactory" /> instance.
+    /// Returns the <see cref="DenverDBFactory" /> instance.
     /// </summary>
     protected override DbProviderFactory DbProviderFactory
     {
-      get { return SQLiteFactory.Instance; }
+      get { return DenverDBFactory.Instance; }
     }
   }
 }

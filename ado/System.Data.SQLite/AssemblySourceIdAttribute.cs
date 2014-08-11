@@ -7,7 +7,7 @@
 
 using System;
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
     /// <summary>
     /// Defines a source code identifier custom attribute for an assembly

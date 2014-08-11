@@ -1,0 +1,20 @@
+<!--
+ *
+ * System.Data.SQLite.Properties.targets -
+ *
+ * Written by Joe Mistachkin.
+ * Released to the public domain, use at your own risk!
+ *
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <UseInteropDll>false</UseInteropDll>
+    <UseSqliteStandard>True</UseSqliteStandard>
+    <InteropLog>false</InteropLog>
+    <BinaryOutputPath>..\..\bin\$(ConfigurationYear)\$(Configuration)\$(Platform)\</BinaryOutputPath>
+    <InteropExtensionFunctions>false</InteropExtensionFunctions>
+    <InteropTestExtension>false</InteropTestExtension>
+    <InteropVirtualTable>false</InteropVirtualTable>
+  </PropertyGroup>
+
+</Project>

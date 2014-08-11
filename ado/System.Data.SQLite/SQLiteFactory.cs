@@ -5,7 +5,7 @@
  * Released to the public domain, use at your own risk!
  ********************************************************/
 
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
   using System;
   using System.Data.Common;
@@ -14,12 +14,12 @@ namespace System.Data.SQLite
   /// <summary>
   /// SQLite implementation of <see cref="DbProviderFactory" />.
   /// </summary>
-  public sealed partial class SQLiteFactory : DbProviderFactory, IDisposable
+  public sealed partial class DenverDBFactory : DbProviderFactory, IDisposable
   {
     /// <summary>
     /// Constructs a new instance.
     /// </summary>
-    public SQLiteFactory()
+    public DenverDBFactory()
     {
         //
         // NOTE: Do nothing here now.  All the logging setup related code has
@@ -45,7 +45,7 @@ namespace System.Data.SQLite
     {
 #if THROW_ON_DISPOSED
         if (disposed)
-            throw new ObjectDisposedException(typeof(SQLiteFactory).Name);
+            throw new ObjectDisposedException(typeof(DenverDBFactory).Name);
 #endif
     }
 
@@ -74,7 +74,7 @@ namespace System.Data.SQLite
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
     #region Destructor
-    ~SQLiteFactory()
+    ~DenverDBFactory()
     {
         Dispose(false);
     }
@@ -95,9 +95,9 @@ namespace System.Data.SQLite
     }
 
     /// <summary>
-    /// Static instance member which returns an instanced <see cref="SQLiteFactory" /> class.
+    /// Static instance member which returns an instanced <see cref="DenverDBFactory" /> class.
     /// </summary>
-    public static readonly SQLiteFactory Instance = new SQLiteFactory();
+    public static readonly DenverDBFactory Instance = new DenverDBFactory();
 
     /// <summary>
     /// Creates and returns a new <see cref="SQLiteCommand" /> object.

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Globalization;
 
 #region Non-Generic Classes
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
     #region SQLiteVirtualTableCursorEnumerator Class
     /// <summary>
@@ -1056,7 +1056,7 @@ namespace System.Data.SQLite
 ///////////////////////////////////////////////////////////////////////////////
 
 #region Generic Classes
-namespace System.Data.SQLite.Generic
+namespace System.Data.DenverDB.Generic
 {
     #region SQLiteVirtualTableCursorEnumerator<T> Class
     /// <summary>

@@ -6,7 +6,7 @@
  ********************************************************/
 
 #if !PLATFORM_COMPACTFRAMEWORK
-namespace System.Data.SQLite
+namespace System.Data.DenverDB
 {
     using System.Globalization;
     using System.Transactions;

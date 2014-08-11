@@ -11,6 +11,8 @@ db/test
 db/docs
 db/dist
 db/examples
+db/build_windows/Win32
+db/build_windows/x64
 bin
 
 ## Ignore Visual Studio temporary files, build results, and
@@ -20,5 +22,7 @@ bin
 *.suo
 *.user
 *.sln.docstates
+*.opensdf
+*.sdf
 
 
