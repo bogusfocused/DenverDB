@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="12.0">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,39 +19,44 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-  <ProjectGuid>{0D7E0170-2D8B-11DF-8A39-0800200C9A66}</ProjectGuid>
+    <ProjectGuid>{0D7E0170-2D8B-11DF-8A39-0800200C9A66}</ProjectGuid>
+    <ProjectName>DenverDBodbc</ProjectName>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup>
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
-    </ImportGroup>
-  <ImportGroup>
-    <Import Project="library.props"/>
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <PropertyGroup Label="UserMacros"/>
+  <ImportGroup>
+    <Import Project="library.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
   </PropertyGroup>
@@ -61,7 +66,7 @@
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_USRDLL;SQLITE_EXPORTS;_CRT_SECURE_NO_WARNINGS;SQLITE_CORE;_WIN32;WITHOUT_SHELL;HAVE_SQLITE3PREPAREV2=1;NO_TCL;THREADSAFE=1;SQLITE_DLL=1;SQLITE_THREADSAFE=1;SQLITE_OS_WIN=1;SQLITE_ASCII=1;SQLITE_SOUNDEX=1;SQLITE_OMIT_SHARED_CACHE=1;SQLITE_OMIT_EXPLAIN=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libdb_sql61d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\Static $(Configuration)\denverdb.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>..\..\lang\sql\odbc\sqlite3odbc.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
@@ -71,7 +76,7 @@
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_USRDLL;SQLITE_EXPORTS;_CRT_SECURE_NO_WARNINGS;SQLITE_CORE;_WIN32;WITHOUT_SHELL;HAVE_SQLITE3PREPAREV2=1;NO_TCL;THREADSAFE=1;SQLITE_DLL=1;SQLITE_THREADSAFE=1;SQLITE_OS_WIN=1;SQLITE_ASCII=1;SQLITE_SOUNDEX=1;SQLITE_OMIT_SHARED_CACHE=1;SQLITE_OMIT_EXPLAIN=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libdb_sql61.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\Static $(Configuration)\denverdb.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>..\..\lang\sql\odbc\sqlite3odbc.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
@@ -81,7 +86,7 @@
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_USRDLL;SQLITE_EXPORTS;_CRT_SECURE_NO_WARNINGS;SQLITE_CORE;_WIN32;WITHOUT_SHELL;HAVE_SQLITE3PREPAREV2=1;NO_TCL;THREADSAFE=1;SQLITE_DLL=1;SQLITE_THREADSAFE=1;SQLITE_OS_WIN=1;SQLITE_ASCII=1;SQLITE_SOUNDEX=1;SQLITE_OMIT_SHARED_CACHE=1;SQLITE_OMIT_EXPLAIN=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libdb_sql61d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\Static $(Configuration)\denverdb.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>..\..\lang\sql\odbc\sqlite3odbc.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
@@ -91,12 +96,12 @@
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_USRDLL;SQLITE_EXPORTS;_CRT_SECURE_NO_WARNINGS;SQLITE_CORE;_WIN32;WITHOUT_SHELL;HAVE_SQLITE3PREPAREV2=1;NO_TCL;THREADSAFE=1;SQLITE_DLL=1;SQLITE_THREADSAFE=1;SQLITE_OS_WIN=1;SQLITE_ASCII=1;SQLITE_SOUNDEX=1;SQLITE_OMIT_SHARED_CACHE=1;SQLITE_OMIT_EXPLAIN=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>libdb_sql61.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\Static $(Configuration)\denverdb.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>..\..\lang\sql\odbc\sqlite3odbc.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\lang\sql\odbc\sqlite3odbc.c"/>
+    <ClCompile Include="..\..\lang\sql\odbc\sqlite3odbc.c" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\lang\sql\odbc\sqlite3odbc.rc">
@@ -106,9 +111,10 @@
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NDEBUG;$(NoInherit));%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
+    <None Include="..\..\lang\sql\odbc\sqlite3odbc.def" />
   </ItemGroup>
 </Project>

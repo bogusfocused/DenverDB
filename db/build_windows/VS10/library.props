@@ -12,12 +12,12 @@
 	<TargetExt Condition="'$(Configuration)'=='Debug'or'$(Configuration)'=='Release'">.dll</TargetExt>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Debug|Win32'">lib$(ProjectName)$(BDB_VERSION)d</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">lib$(ProjectName)$(BDB_VERSION)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Debug|Win32'">$(ProjectName)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Release|Win32'">$(ProjectName)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName)</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">lib$(ProjectName)$(BDB_VERSION)d</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">lib$(ProjectName)$(BDB_VERSION)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Debug|x64'">$(ProjectName)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Static Release|x64'">$(ProjectName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>

@@ -9,13 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		db\build_windows\VS10\application.props = db\build_windows\VS10\application.props
 		Build.bat = Build.bat
-		build.targets = build.targets
 		db\build_windows\VS10\library.props = db\build_windows\VS10\library.props
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DenverDB", "db\build_windows\VS10\db_sql.vcxproj", "{4B65E600-064A-11DF-8A39-0800200C9A66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Data.DenverDB", "ado\System.Data.SQLite\System.Data.DenverDB.csproj", "{AC139952-261A-4463-B6FA-AEBC25283A66}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DenverDBodbc", "db\build_windows\VS10\db_sql_odbc.vcxproj", "{0D7E0170-2D8B-11DF-8A39-0800200C9A66}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4B65E600-064A-11DF-8A39-0800200C9A66} = {4B65E600-064A-11DF-8A39-0800200C9A66}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +77,18 @@ Global
 		{AC139952-261A-4463-B6FA-AEBC25283A66}.Static Debug|x64.ActiveCfg = Debug|Any CPU
 		{AC139952-261A-4463-B6FA-AEBC25283A66}.Static Release|Win32.ActiveCfg = Release|Any CPU
 		{AC139952-261A-4463-B6FA-AEBC25283A66}.Static Release|x64.ActiveCfg = Release|Any CPU
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Debug|x64.ActiveCfg = Debug|x64
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Release|Win32.ActiveCfg = Release|Win32
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Release|x64.ActiveCfg = Release|x64
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Static Debug|Win32.ActiveCfg = Debug|Win32
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Static Debug|Win32.Build.0 = Debug|Win32
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Static Debug|x64.ActiveCfg = Debug|x64
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Static Debug|x64.Build.0 = Debug|x64
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Static Release|Win32.ActiveCfg = Release|Win32
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Static Release|Win32.Build.0 = Release|Win32
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Static Release|x64.ActiveCfg = Release|x64
+		{0D7E0170-2D8B-11DF-8A39-0800200C9A66}.Static Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
