@@ -46,10 +46,10 @@
       <AdditionalOptions>/machine:x86 /FIXED:NO %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>$(OutDir);../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)lib$(ProjectName)$(BDB_VERSION)d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ImportLibrary>$(OutDir)lib$(ProjectName)$(BDB_VERSION)d.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
       <OptimizeReferences>true</OptimizeReferences>
       <TargetMachine>NotSet</TargetMachine>
     </Link>
@@ -78,10 +78,10 @@
       <AdditionalOptions>/machine:x86 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>$(OutDir);../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)lib$(ProjectName)$(BDB_VERSION).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ImportLibrary>$(OutDir)lib$(ProjectName)$(BDB_VERSION).lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
       <OptimizeReferences>true</OptimizeReferences>
       <TargetMachine>NotSet</TargetMachine>
     </Link>
@@ -110,10 +110,10 @@
       <AdditionalOptions>/machine:x64 /FIXED:NO %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>$(OutDir);../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)lib$(ProjectName)$(BDB_VERSION)d.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ImportLibrary>$(OutDir)lib$(ProjectName)$(BDB_VERSION)d.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
       <OptimizeReferences>true</OptimizeReferences>
       <TargetMachine>NotSet</TargetMachine>
     </Link>
@@ -142,10 +142,10 @@
       <AdditionalOptions>/machine:x64 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalLibraryDirectories>$(OutDir);../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)lib$(ProjectName)$(BDB_VERSION).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <ImportLibrary>$(OutDir)lib$(ProjectName)$(BDB_VERSION).lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)$(ProjectName).lib</ImportLibrary>
       <OptimizeReferences>true</OptimizeReferences>
       <TargetMachine>NotSet</TargetMachine>
     </Link>
