@@ -116,8 +116,8 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "Christian Werner Software & Consulting\0"
-            VALUE "FileDescription", "DenverDB ODBC Driver\0"
+            VALUE "CompanyName", "Denver DB\0"
+            VALUE "FileDescription", "Denver DB ODBC Driver\0"
             VALUE "FileVersion", VERSION "\0"
             VALUE "InternalName", "DenverDBODBC\0"
             VALUE "LegalCopyright", "Copyright © 2004-2013 <chw@ch-werner.de>\0"

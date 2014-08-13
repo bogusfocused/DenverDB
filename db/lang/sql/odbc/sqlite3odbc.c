@@ -20322,7 +20322,7 @@ InUn(int remove, char *cmdline)
 void CALLBACK
 install(HWND hwnd, HINSTANCE hinst, LPSTR lpszCmdLine, int nCmdShow)
 {
-	InUn(0, lpszCmdLine);
+	//InUn(0, lpszCmdLine);
 }
 
 /**
@@ -20336,7 +20336,7 @@ install(HWND hwnd, HINSTANCE hinst, LPSTR lpszCmdLine, int nCmdShow)
 void CALLBACK
 uninstall(HWND hwnd, HINSTANCE hinst, LPSTR lpszCmdLine, int nCmdShow)
 {
-	InUn(1, lpszCmdLine);
+	//InUn(1, lpszCmdLine);
 }
 
 #endif /* WITHOUT_INSTALLER */

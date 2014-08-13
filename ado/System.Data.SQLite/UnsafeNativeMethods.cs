@@ -111,7 +111,7 @@ namespace System.Data.DenverDB
       /// </summary>
       static UnsafeNativeMethods()
       {
-          Initialize();
+          //Initialize();
       }
 
       /////////////////////////////////////////////////////////////////////////
