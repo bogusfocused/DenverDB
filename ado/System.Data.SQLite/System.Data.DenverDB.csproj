@@ -24,30 +24,6 @@
     <NetFx40>true</NetFx40>
     <ConfigurationYear>2010</ConfigurationYear>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Setup Debug|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Setup Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NET_40;USE_PREPARE_V2;SQLITE_STANDARD;THROW_ON_DISPOSED;PRELOAD_NATIVE_LIBRARY;INTEROP_CODEC;INTEROP_DEBUG;TRACE_PRELOAD;TRACE_SHARED;TRACE_WARNING;WINDOWS</DefineConstants>
-    <DocumentationFile>..\..\bin\AnyCPU\Debug\System.Data.SQLite.xml</DocumentationFile>
-    <NoWarn>618,1591;3001</NoWarn>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Setup Release|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\Setup Release\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;NET_40;USE_PREPARE_V2;SQLITE_STANDARD;THROW_ON_DISPOSED;PRELOAD_NATIVE_LIBRARY;INTEROP_CODEC;INTEROP_DEBUG;TRACE_PRELOAD;TRACE_SHARED;TRACE_WARNING;WINDOWS</DefineConstants>
-    <DocumentationFile>..\..\bin\AnyCPU\Debug\System.Data.SQLite.xml</DocumentationFile>
-    <NoWarn>618,1591;3001</NoWarn>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <Import Project="System.Data.DenverDB.Properties.targets" />
   <Import Project="$(SQLiteNetDir)\Targets\SQLite.NET.Settings.targets" />
   <PropertyGroup Condition="'$(BinaryOutputPath)' != ''">
