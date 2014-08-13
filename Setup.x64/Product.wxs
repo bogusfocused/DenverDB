@@ -4,14 +4,16 @@
      xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
   <Product Id="*" Name="Denver DB" Language="1033" Version="6.1.19.0" Manufacturer="Denver DB"
            UpgradeCode="ac4013f8-0c95-4793-91d3-b2ab0c2e6761">
-    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" />
 
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
     <MediaTemplate EmbedCab="yes" />
 
     <Feature Id="ProductFeature" Title="Denver DB" Level="1">
       <ComponentGroupRef Id="SystemComponents" />
+      <ComponentGroupRef Id="System64Components" />
       <ComponentGroupRef Id="ODBCComponents" />
+      <ComponentGroupRef Id="ODBC64Components" />
       <ComponentGroupRef Id="ProductComponents" />
       <ComponentGroupRef Id="ConfigComponents"/>
     </Feature>
@@ -21,9 +23,15 @@
   <Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="SystemFolder" Name="SystemFolder"/>
+      <Directory Id="System64Folder" Name="System64Folder"/>
       <Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLDIR" Name="Denver DB">
           <Directory Id="ODBCFolder" Name="ODBC Driver"/>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="INSTALLDIR64" Name="Denver DB">
+          <Directory Id="ODBC64Folder" Name="ODBC Driver"/>
         </Directory>
       </Directory>
     </Directory>
@@ -32,11 +40,11 @@
   <Fragment>
     <ComponentGroup Id="SystemComponents" Directory="SystemFolder" Source="..\bin\Win32\Release">
       <Component Win64="no">
-        <File Name="DenverDB.dll"  />
+        <File Id="DenverDBDLL" Name="DenverDB.dll"  />
       </Component>
     </ComponentGroup>
     <ComponentGroup Id="ODBCComponents" Directory="ODBCFolder" Source="..\bin\Win32\Release">
-      <Component Win64="no">
+      <Component Id="ODBCComponent" Win64="no">
         <File Id="DenverDBodbcDLL" Name="DenverDBodbc.dll"  />
         <RegistryKey Root="HKLM" Key="SOFTWARE\ODBC">
           <RegistryKey Key="ODBCINST.INI">
@@ -58,11 +66,34 @@
     </ComponentGroup>
   </Fragment>
 
+  <Fragment>
+    <ComponentGroup Id="System64Components" Directory="System64Folder" Source="..\bin\x64\Release">
+      <Component Win64="yes">
+        <File Name="DenverDB.dll"  />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id="ODBC64Components" Directory="ODBC64Folder" Source="..\bin\x64\Release">
+      <Component Win64="yes">
+        <File Id="DenverDBodbc64DLL" Name="DenverDBodbc.dll"  />
+        <RegistryKey Root="HKLM" Key="SOFTWARE\ODBC">
+          <RegistryKey Key="ODBCINST.INI">
+            <RegistryKey Key="ODBC Drivers">
+              <RegistryValue Name="Denver DB ODBC Driver" Value="Installed" Type="string"/>
+            </RegistryKey>
+            <RegistryKey ForceDeleteOnUninstall="yes" Key="Denver DB ODBC Driver">
+              <RegistryValue Name="Driver" Value="[#DenverDBodbc64DLL]" Type="string"/>
+              <RegistryValue Name="Setup" Value="[#DenverDBodbc64DLL]" Type="string"/>
+            </RegistryKey>
+          </RegistryKey>
+        </RegistryKey>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
 
   <Fragment>
-    <ComponentGroup Id="ConfigComponents" Directory="INSTALLDIR">
-      <Component>
-        <RegistryValue Root="HKCU" Key="Software\DenverDB" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+    <ComponentGroup Id="ConfigComponents" >
+      <Component Id="ConfigComponent" Directory="INSTALLDIR" Win64="no">
+        <RegistryValue Root="HKLM" Key="Software\DenverDB" Name="installed" Type="integer" Value="1" KeyPath="yes" />
         <util:XmlConfig
         Id="Machine_Config_Xml_Root"
         File="[WindowsFolder]Microsoft.NET\Framework\v4.0.30319\CONFIG\machine.Config"
@@ -113,7 +144,58 @@
            Sequence="1">
         </util:XmlConfig>
       </Component>
+      <Component Id="Config64Component" Directory="INSTALLDIR64" Win64="yes">
+        <RegistryValue Root="HKLM" Key="Software\DenverDB" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+        <util:XmlConfig
+        Id="Machine_Config_Xml_Root64"
+        File="[WindowsFolder]Microsoft.NET\Framework64\v4.0.30319\CONFIG\machine.Config"
+        Action="create"
+        On="install"
+        VerifyPath="//configuration/system.data/DbProviderFactories/add[\[]@invariant='System.Data.DenverDB'[\]]"
+        ElementPath="//configuration/system.data/DbProviderFactories"
+        Name="add"
+        Node="element"
+        Sequence="2">
+          <util:XmlConfig
+                 Id="Machine_Config_Xml_6"
+                 File="[WindowsFolder]Microsoft.NET\Framework64\v4.0.30319\CONFIG\machine.Config"
+                 ElementId="Machine_Config_Xml_Root64"
+                 Name="name"
+                 Value="Denver DB Data Provider"
+                 />
+          <util:XmlConfig
+                 Id="Machine_Config_Xml_7"
+                 File="[WindowsFolder]Microsoft.NET\Framework64\v4.0.30319\CONFIG\machine.Config"
+                 ElementId="Machine_Config_Xml_Root64"
+                 Name="invariant"
+                 Value="System.Data.DenverDB"
+                 />
+          <util:XmlConfig
+                 Id="Machine_Config_Xml_8"
+                 File="[WindowsFolder]Microsoft.NET\Framework64\v4.0.30319\CONFIG\machine.Config"
+                 ElementId="Machine_Config_Xml_Root64"
+                 Name="description"
+                 Value=".Net Framework Data Provider for DenverDB"
+                 />
+          <util:XmlConfig
+                 Id="Machine_Config_Xml_9"
+                 File="[WindowsFolder]Microsoft.NET\Framework64\v4.0.30319\CONFIG\machine.Config"
+                 ElementId="Machine_Config_Xml_Root64"
+                 Name="type"
+                 Value="System.Data.DenverDB.DenverDBFactory, System.Data.DenverDB, Version=1.0.93.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL"
+                 />
+        </util:XmlConfig>
+        <util:XmlConfig
+           Id="Machine_Config_Xml_Uninstall_64"
+           File="[WindowsFolder]Microsoft.NET\Framework64\v4.0.30319\CONFIG\machine.Config"
+           VerifyPath="//configuration/system.data/DbProviderFactories/add[\[]@invariant='System.Data.DenverDB'[\]]"
+           Action="delete"
+           On="uninstall"
+           ElementPath="//configuration/system.data/DbProviderFactories"
+           Node="element"
+           Sequence="1">
+        </util:XmlConfig>
+      </Component> 
     </ComponentGroup>
   </Fragment>
-
 </Wix>

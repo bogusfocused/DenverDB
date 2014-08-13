@@ -43,7 +43,7 @@
     <DocumentationFile>..\..\bin\AnyCPU\Debug\System.Data.SQLite.xml</DocumentationFile>
     <NoWarn>618,1591;3001</NoWarn>
     <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
