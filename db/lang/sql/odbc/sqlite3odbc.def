@@ -74,5 +74,3 @@ SQLFreeStmt
 SQLAllocConnect
 SQLFreeConnect
 ConfigDSN
-install
-uninstall
